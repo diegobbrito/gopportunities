@@ -5,16 +5,11 @@ import (
 )
 
 func Initialize() {
-	r := gin.Default()
+	router := gin.Default()
 
-	// Define a simple GET endpoint
-	r.GET("/hello", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "Hello, World!",
-		})
-	})
+	initializeRoutes(router)
 
 	// Start the server on port 8080
-	r.Run(":8080")
+	router.Run(":8080")
 
 }
