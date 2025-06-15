@@ -6,10 +6,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func ListOpeningsHandler() func(ctx *gin.Context) {
-	return func(ctx *gin.Context) {
-		ctx.JSON(http.StatusOK, gin.H{
-			"message": "List of openings",
-		})
-	}
+func ListOpeningsHandler(ctx *gin.Context) {
+
+	ctx.JSON(http.StatusOK, gin.H{
+		"message": "List of openings",
+	})
+
 }

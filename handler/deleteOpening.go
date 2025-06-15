@@ -6,10 +6,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func DeleteOpeningHandler() func(ctx *gin.Context) {
-	return func(ctx *gin.Context) {
-		ctx.JSON(http.StatusOK, gin.H{
-			"message": "DELETE opening",
-		})
-	}
+func DeleteOpeningHandler(ctx *gin.Context) {
+	ctx.JSON(http.StatusOK, gin.H{
+		"message": "DELETE opening",
+	})
 }
